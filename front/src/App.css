@@ -1,0 +1,86 @@
+.App {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 95vh;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+.messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.user-message {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.user-message-content,
+.bot-message-content {
+  max-width: 75%;
+  width: auto;
+}
+
+.user-message-text,
+.bot-message-text {
+  width: auto;
+  padding: 8px 20px;
+  border-radius: 17px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.user-message-text {
+  text-align: right;
+  margin-right: 12px;
+  margin-top: 5px;
+}
+
+.bot-message {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.bot-message-text {
+  text-align: left;
+  margin-left: 12px;
+  margin-bottom: 5px;
+}
+
+.input-container {
+  display: flex;
+  width: calc(100% - 20px);
+}
+
+.input-container input {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.input-container button {
+  margin-left: 10px;
+  border-radius: 50%;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(270deg);
+  background: #168be1;
+  border: 1px solid #0c5b95;
+}
+
+.input-container button img {
+  width: 20px;
+}
