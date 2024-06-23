@@ -1,0 +1,33 @@
+pipeline {
+   agent any
+
+   stages {
+      stage('Checkout') { 
+         steps {
+           checkout scm
+     }
+   }
+stage('Build')  {
+    steps   {
+      echo 'Building...'   //comandos
+       sh 'mvn clean package' 
+     }
+}
+stage('Test') {
+  steps {
+    echo 'Testing...'
+  sh 'mvn test'
+     }
+}
+
+stage('Deploy')   {
+    steps {
+      echo 'Deploying...'
+      sh ´scp target/my-app.jar
+user@server:/path/to/deploy'
+       }
+     }
+  }
+}
+
+
